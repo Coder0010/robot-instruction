@@ -19,7 +19,7 @@ class RobotRequest
     {
         if(is_array($this->getRequest()) && !empty($this->getRequest())){
             foreach ($this->getRequest() as $value) {
-                if(in_array($value, Env::MOVMENTS) || in_array($value, array_keys(Env::MOVMENTS))){
+                if(in_array($value, Env::MOVMENTS)){
                     $this->setStatus(true);
                 }else{
                     $this->setStatus(false);
